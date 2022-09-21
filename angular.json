@@ -31,7 +31,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css"
             ],
             "scripts": []
           },
@@ -103,9 +106,21 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "MakeComputer:build:production",
+            "firebaseProject": "makecomputer-73eaa",
+            "firebaseHostingSite": "makecomputer-73eaa"
+          }
         }
       }
     }
   },
-  "defaultProject": "MakeComputer"
+  "cli": {
+    "analytics": false
+  }
 }

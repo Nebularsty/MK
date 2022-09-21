@@ -1,0 +1,47 @@
+.background {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  z-index: -99;
+}
+
+.geral {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+
+  .login_container {
+    height: 60%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding: 30px;
+    background-color: #000;
+    border-radius: 20px;
+    border: 2px solid #5ce1e6;
+
+    .input__login {
+      border-color: #5ce1e6;
+      color: #5ce1e6;
+      background: none;
+      font-weight: bold;
+    }
+
+    .botao__login {
+      border-color: #5ce1e6;
+      color: #5ce1e6;
+    }
+
+    .titulo__login {
+      color: #5ce1e6;
+    }
+  }
+}

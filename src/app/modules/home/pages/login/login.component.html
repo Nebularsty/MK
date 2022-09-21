@@ -1,0 +1,21 @@
+<div class="geral">
+  <form [formGroup]="loginForm" class="login_container" (ngSubmit)="login()">
+    <h1 class="titulo__login">Welcome back!</h1>
+    <span class="p-float-label">
+      <input id="float-input" class="input__login" type="text" pInputText formControlName="email">
+      <label for="float-input">Email</label>
+    </span>
+
+    <span class="p-float-label">
+      <input id="float-input" class="input__login" type="password" pInputText formControlName="password">
+      <label for="float-input">Senha</label>
+    </span>
+
+    <button pButton pRipple type="submit" label="Login" class="p-button-outlined botao__login"></button>
+
+    <p-button styleClass="px-3" class="botao__login-google" (onClick)="loginWithGoogle()">
+      <i class="pi pi-google"></i>
+    </p-button>
+  </form>
+</div>
+<img class="background" src="../../../../../assets/background/fundo.png">

@@ -1,0 +1,30 @@
+.nav__container {
+  height: 90px;
+  width: 100%;
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+
+  .text {
+    color: #fff;
+  }
+
+  .logo__nav {
+    height: 80px;
+    width: 170px;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .usuario__nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #fff;
+  }
+}

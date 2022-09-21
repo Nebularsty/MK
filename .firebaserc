@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "makecomputer-73eaa": {
+      "hosting": {
+        "MakeComputer": [
+          "makecomputer-73eaa"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "makecomputer-73eaa"
+  }
+}

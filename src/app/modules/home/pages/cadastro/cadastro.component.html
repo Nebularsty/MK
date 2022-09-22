@@ -1,1 +1,23 @@
-<p>cadastro works!</p>
+<div class="geral">
+  <form [formGroup]="registerForm" class="register_container" (ngSubmit)="registerUsuarioNovo()">
+    <h1 class="titulo__register">Register</h1>
+
+    <span class="p-float-label">
+      <input id="float-input" class="input__register" type="text" pInputText formControlName="nome">
+      <label for="float-input" class="label">Nome</label>
+    </span>
+
+    <span class="p-float-label">
+      <input id="float-input" class="input__register" type="text" pInputText formControlName="email">
+      <label for="float-input" class="label">Email</label>
+    </span>
+
+    <span class="p-float-label">
+      <input id="float-input" class="input__register" type="password" pInputText formControlName="password">
+      <label for="float-input" class="label">Senha</label>
+    </span>
+
+    <button pButton pRipple type="submit" label="Register" class="p-button-outlined botao__register"></button>
+  </form>
+</div>
+<img class="background" src="../../../../../assets/background/fundo.png">

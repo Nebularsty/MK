@@ -41,4 +41,8 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['index']);
     });
   }
+
+  paginaCadastroBotao() {
+    this.router.navigate(['cadastro']);
+  }
 }

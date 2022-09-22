@@ -1,0 +1,53 @@
+.background {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  z-index: -99;
+}
+
+.geral {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 50vw;
+
+  .register_container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding: 30px;
+    background-color: none;
+    border-radius: 20px;
+
+    .input__register {
+      width: 420px;
+      border-color: #fff;
+      color: #fff;
+      background: none;
+      font-weight: bold;
+    }
+
+    .label {
+      color: #fff;
+    }
+
+    .botao__register {
+      width: 100px;
+      border-color: #fff;
+      color: #fff;
+    }
+
+    .titulo__register {
+      font-size: 80px;
+      color: #fff;
+    }
+  }
+}

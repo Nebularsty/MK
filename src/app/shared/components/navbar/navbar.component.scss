@@ -1,11 +1,12 @@
 .nav__container {
+  position: absolute;
   height: 90px;
   width: 100%;
   padding: 0 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #000000;
+  background-color: #0448a1;
 
   .text {
     color: #fff;

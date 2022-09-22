@@ -18,6 +18,7 @@ import { AvatarModule } from 'primeng/avatar';
 import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
+import { PerfilUsuarioComponent } from './shared/components/perfil-usuario/perfil-usuario.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { NavbarComponent } from './shared/components/navbar/navbar.component';
     CadastroComponent,
     IndexComponent,
     NavbarComponent,
+    PerfilUsuarioComponent,
   ],
   imports: [
     BrowserModule,

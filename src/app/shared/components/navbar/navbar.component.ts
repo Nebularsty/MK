@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/core/authentication/auth.service';
 import { Items } from '../../models/MenuItems';
 
 @Component({
@@ -7,7 +8,12 @@ import { Items } from '../../models/MenuItems';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
-  constructor() {}
+  public navbar: boolean = false;
+  constructor(private authService: AuthService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.authService.navbarEvent.subscribe(
+      (mostrar) => (this.navbar = mostrar)
+    );
+  }
 }

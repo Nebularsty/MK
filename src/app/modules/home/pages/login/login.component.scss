@@ -13,35 +13,45 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  width: 100vw;
+  width: 50vw;
 
   .login_container {
-    height: 60%;
-    width: 30%;
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 25px;
     padding: 30px;
-    background-color: #000;
+    background-color: none;
     border-radius: 20px;
-    border: 2px solid #5ce1e6;
 
     .input__login {
-      border-color: #5ce1e6;
-      color: #5ce1e6;
+      width: 420px;
+      border-color: #fff;
+      color: #fff;
       background: none;
       font-weight: bold;
     }
 
-    .botao__login {
-      border-color: #5ce1e6;
-      color: #5ce1e6;
+    .label {
+      color: #fff;
+    }
+
+    .botoes__container {
+      display: flex;
+      gap: 20px;
+      .botao__login {
+        width: 100px;
+        border-color: #fff;
+        color: #fff;
+      }
     }
 
     .titulo__login {
-      color: #5ce1e6;
+      font-size: 80px;
+      color: #fff;
     }
   }
 }

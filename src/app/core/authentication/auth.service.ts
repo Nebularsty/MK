@@ -1,5 +1,6 @@
 import { EventEmitter, Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { FirestoreService } from '../services/firestore.service';
 import { Router } from '@angular/router';
 import firebase from 'firebase/compat/app';
 
@@ -9,14 +10,20 @@ import firebase from 'firebase/compat/app';
 export class AuthService {
   public navbarEvent = new EventEmitter();
 
-  constructor(private auth: AngularFireAuth, private router: Router) {}
+  constructor(
+    private auth: AngularFireAuth,
+    private router: Router,
+    private afs: FirestoreService
+  ) {}
 
-  registerUser(nome: string, email: string, password: string) {
+  registerUser(email: string, password: string) {
     firebase
       .auth()
       .createUserWithEmailAndPassword(email, password)
       .then((userCredencial) => {
         let user = userCredencial.user;
+        console.log(user);
+        // this.afs.createUser(user);
         this.router.navigate(['']);
       });
   }

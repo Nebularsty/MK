@@ -17,6 +17,7 @@ import { MegaMenuModule } from 'primeng/megamenu';
 import { AvatarModule } from 'primeng/avatar';
 import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { PerfilUsuarioComponent } from './shared/components/perfil-usuario/perfil-usuario.component';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
@@ -40,6 +41,7 @@ import { provideFirestore, getFirestore } from '@angular/fire/firestore';
     ReactiveFormsModule,
     AvatarModule,
     MegaMenuModule,
+    AngularFirestoreModule,
     AngularFireModule.initializeApp(environment.firebase),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),

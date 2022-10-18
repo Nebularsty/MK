@@ -22,6 +22,9 @@ import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { PerfilUsuarioComponent } from './shared/components/perfil-usuario/perfil-usuario.component';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
+import { CarrosselComponent } from './shared/components/carrossel/carrossel.component';
+import { MontepcComponent } from './modules/home/pages/montepc/montepc.component';
+import { ProfileComponent } from './modules/home/pages/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +34,9 @@ import { provideFirestore, getFirestore } from '@angular/fire/firestore';
     IndexComponent,
     NavbarComponent,
     PerfilUsuarioComponent,
+    CarrosselComponent,
+    MontepcComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,

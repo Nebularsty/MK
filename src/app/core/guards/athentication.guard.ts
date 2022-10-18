@@ -23,7 +23,6 @@ export class AthenticationGuardGuard implements CanActivate {
     const user = localStorage.getItem('auth_user');
 
     const credential: any = JSON.parse(user!);
-    console.log(credential);
 
     const expirationTime = credential.user.stsTokenManager.expirationTime;
     const dataAtual = new Date().getTime();

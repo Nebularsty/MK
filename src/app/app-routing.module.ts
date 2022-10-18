@@ -1,3 +1,4 @@
+import { ProfileComponent } from './modules/home/pages/profile/profile.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AthenticationGuardGuard } from './core/guards/athentication.guard';
@@ -8,6 +9,7 @@ import { LoginComponent } from './modules/home/pages/login/login.component';
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'cadastro', component: CadastroComponent },
+  { path: 'perfil', component: ProfileComponent },
   {
     path: 'index',
     component: IndexComponent,

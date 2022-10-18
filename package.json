@@ -22,6 +22,7 @@
     "@firebase/firestore": "^3.5.0",
     "angularfirestore-deep": "^1.0.9",
     "firebase": "^9.10.0",
+    "keen-slider": "^6.8.2",
     "primeicons": "^5.0.0",
     "primeng": "^14.1.1",
     "rxjs": "~7.5.0",

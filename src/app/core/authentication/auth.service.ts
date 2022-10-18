@@ -1,6 +1,6 @@
+import { FirestoreService } from 'src/app/core/services/firestore.service';
 import { EventEmitter, Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
-import { FirestoreService } from '../services/firestore.service';
 import { Router } from '@angular/router';
 import firebase from 'firebase/compat/app';
 
@@ -13,7 +13,7 @@ export class AuthService {
   constructor(
     private auth: AngularFireAuth,
     private router: Router,
-    private afs: FirestoreService
+    private firestoreService: FirestoreService
   ) {}
 
   registerUser(email: string, password: string) {
@@ -23,7 +23,6 @@ export class AuthService {
       .then((userCredencial) => {
         let user = userCredencial.user;
         console.log(user);
-        // this.afs.createUser(user);
         this.router.navigate(['']);
       });
   }
@@ -40,6 +39,7 @@ export class AuthService {
         localStorage.setItem('auth_user', JSON.stringify(result));
         this.navbarEvent.emit(true);
         this.router.navigate(['index']);
+        this.firestoreService.leituraDadosUsuario();
       })
       .catch((err: any) => {
         this.navbarEvent.emit(false);

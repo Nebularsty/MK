@@ -1,3 +1,4 @@
+import { FirestoreService } from 'src/app/core/services/firestore.service';
 import { Component, OnInit } from '@angular/core';
 import {
   FormBuilder,
@@ -17,7 +18,11 @@ import firebase from 'firebase/compat/app';
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
 
-  constructor(private authService: AuthService, private router: Router) {
+  constructor(
+    private authService: AuthService,
+    private router: Router,
+    private firestoreService: FirestoreService
+  ) {
     this.loginForm = new FormGroup({
       email: new FormControl('', Validators.required),
       password: new FormControl('', Validators.required),

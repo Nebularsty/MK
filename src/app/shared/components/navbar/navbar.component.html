@@ -4,9 +4,14 @@
     <img src="../../../../assets/logo/logomk.png">
   </div>
 
-  <div class="usuario__nav">
+  <div class="link__pages__nav">
+    <p (click)="irParaHome()">Home</p>
+    <p>Monte o seu</p>
+  </div>
+
+  <div class="usuario__nav" (click)="irParaPerfil()">
     <p>Nebularsty</p>
-    <p-avatar label="N" styleClass="mr-2" size="xlarge" shape="circle"></p-avatar>
-    <p-megaMenu></p-megaMenu>
+    <p-avatar *ngIf="profileImg" image="../assets/profile/user.png" styleClass="mr-2" size="xlarge" shape="circle">
+    </p-avatar>
   </div>
 </div>

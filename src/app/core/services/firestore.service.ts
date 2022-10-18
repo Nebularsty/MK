@@ -1,20 +1,21 @@
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
-import { AuthService } from 'src/app/core/authentication/auth.service';
 import {
   AngularFirestore,
   AngularFirestoreCollection,
   AngularFirestoreDocument,
 } from '@angular/fire/compat/firestore';
+import { uuidv4 } from '@firebase/util';
 
 interface Users {
   name: string;
   nick: string;
   birthdate: string;
-  phone: number;
+  phone: string;
   email: string;
   password: string;
-  uid: string;
+  uid: string | undefined;
 }
 
 @Injectable({
@@ -22,9 +23,10 @@ interface Users {
 })
 export class FirestoreService {
   usersCollection: AngularFirestoreCollection<Users>;
+  uid: string | undefined = '';
   users: Observable<Users[]>;
 
-  constructor(private afs: AngularFirestore) {
+  constructor(private afs: AngularFirestore, private auth: AngularFireAuth) {
     this.usersCollection = afs.collection<Users>('users');
     this.users = this.usersCollection.valueChanges();
   }
@@ -35,15 +37,31 @@ export class FirestoreService {
     });
   }
 
-  createUser(token: any) {
-    this.usersCollection.add({
-      name: 'Rodrigo',
-      nick: 'Ro',
-      birthdate: '03042000',
-      phone: 1196387140,
-      email: '',
-      password: '',
-      uid: token,
+  createUser(
+    name: string,
+    nick: string,
+    birthdate: string,
+    phone: string,
+    email: string,
+    password: string
+  ) {
+    this.auth.onAuthStateChanged((user) => {
+      this.uid = user?.uid;
+      console.log(this.uid);
+      this.usersCollection.add({
+        name: name,
+        nick: nick,
+        birthdate: birthdate,
+        phone: phone,
+        email: email,
+        password: password,
+        uid: this.uid,
+      });
     });
+  }
+
+  leituraDadosUsuario() {
+    let leituraDados = this.usersCollection.doc('');
+    console.log(leituraDados);
   }
 }

@@ -39,7 +39,8 @@ export class AuthService {
         localStorage.setItem('auth_user', JSON.stringify(result));
         this.navbarEvent.emit(true);
         this.router.navigate(['index']);
-        this.firestoreService.leituraDadosUsuario();
+        let userId = result.user.uid;
+        this.firestoreService.leituraDadosUsuario(userId);
       })
       .catch((err: any) => {
         this.navbarEvent.emit(false);

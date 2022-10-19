@@ -6,35 +6,31 @@ import {
   AngularFirestoreCollection,
   AngularFirestoreDocument,
 } from '@angular/fire/compat/firestore';
-import { uuidv4 } from '@firebase/util';
 
 interface Users {
+  id: string;
   name: string;
   nick: string;
   birthdate: string;
   phone: string;
   email: string;
   password: string;
-  uid: string | undefined;
+  // uid: string | undefined;
 }
 
 @Injectable({
   providedIn: 'root',
 })
 export class FirestoreService {
-  usersCollection: AngularFirestoreCollection<Users>;
+  private itemDoc: AngularFirestoreDocument<Users>;
+  userCollection: any;
+  user: Observable<Users | undefined>;
   uid: string | undefined = '';
-  users: Observable<Users[]>;
 
   constructor(private afs: AngularFirestore, private auth: AngularFireAuth) {
-    this.usersCollection = afs.collection<Users>('users');
-    this.users = this.usersCollection.valueChanges();
-  }
-
-  leituraDeDados() {
-    this.usersCollection = this.afs.collection('users', (ref) => {
-      return ref.orderBy('name');
-    });
+    this.itemDoc = afs.doc<Users>('items/1');
+    this.user = this.itemDoc.valueChanges();
+    this.userCollection = afs.collection<Users>('users');
   }
 
   createUser(
@@ -45,23 +41,14 @@ export class FirestoreService {
     email: string,
     password: string
   ) {
-    this.auth.onAuthStateChanged((user) => {
-      this.uid = user?.uid;
-      console.log(this.uid);
-      this.usersCollection.add({
-        name: name,
-        nick: nick,
-        birthdate: birthdate,
-        phone: phone,
-        email: email,
-        password: password,
-        uid: this.uid,
-      });
-    });
+    const id = this.afs.createId();
+    const item: Users = { id, name, nick, birthdate, phone, email, password };
+    this.userCollection.doc(id).set(item);
   }
 
-  leituraDadosUsuario() {
-    let leituraDados = this.usersCollection.doc('');
+  leituraDadosUsuario(userId: any) {
+    let leituraDados = this.afs.collection('users').doc(userId).get();
+
     console.log(leituraDados);
   }
 }

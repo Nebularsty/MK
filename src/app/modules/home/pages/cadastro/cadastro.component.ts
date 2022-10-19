@@ -40,6 +40,12 @@ export class CadastroComponent implements OnInit {
     const email = this.registerForm.value.email;
     const password = this.registerForm.value.password;
 
+    this.auth.registerUser(
+      this.registerForm.value.email,
+      this.registerForm.value.password
+    );
+
+    if (email.invalid && password.invalid) return;
     this.firestoreService.createUser(
       name,
       nick,
@@ -47,11 +53,6 @@ export class CadastroComponent implements OnInit {
       phone,
       email,
       password
-    );
-
-    this.auth.registerUser(
-      this.registerForm.value.email,
-      this.registerForm.value.password
     );
   }
 

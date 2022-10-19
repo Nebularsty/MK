@@ -19,7 +19,6 @@ import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
-import { PerfilUsuarioComponent } from './shared/components/perfil-usuario/perfil-usuario.component';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { CarrosselComponent } from './shared/components/carrossel/carrossel.component';
@@ -33,7 +32,6 @@ import { ProfileComponent } from './modules/home/pages/profile/profile.component
     CadastroComponent,
     IndexComponent,
     NavbarComponent,
-    PerfilUsuarioComponent,
     CarrosselComponent,
     MontepcComponent,
     ProfileComponent,

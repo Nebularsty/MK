@@ -1,0 +1,10 @@
+.geral {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .info__user {
+    width: 70vw;
+  }
+}

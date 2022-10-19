@@ -1,5 +1,17 @@
 <app-navbar [profileImg]="false"></app-navbar>
-<div class="botoes__perfil">
-  <button pButton pRipple type="button" label="Exit" class="p-button-raised p-button-danger"
-    (click)="logout()"></button>
+<div class="geral">
+  <div class="info__user">
+
+    <div class="info__label">
+      <input type="text" pInputText />
+      <input type="text" pInputText />
+      <input type="text" pInputText />
+    </div>
+
+    <div class="button__profile">
+      <button pButton pRipple type="button" label="Exit" class="p-button-raised p-button-danger"
+        (click)="logout()"></button>
+    </div>
+  </div>
   <p>profile works!</p>
+</div>

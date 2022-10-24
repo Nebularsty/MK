@@ -8,7 +8,6 @@ import {
 } from '@angular/fire/compat/firestore';
 
 interface Users {
-  id: string;
   name: string;
   nick: string;
   birthdate: string;
@@ -25,7 +24,6 @@ export class FirestoreService {
   private itemDoc: AngularFirestoreDocument<Users>;
   userCollection: any;
   user: Observable<Users | undefined>;
-  uid: string | undefined = '';
 
   constructor(private afs: AngularFirestore, private auth: AngularFireAuth) {
     this.itemDoc = afs.doc<Users>('users/EvHUTUvdB0qm9ZopmFmw');
@@ -41,15 +39,21 @@ export class FirestoreService {
     email: string,
     password: string
   ) {
-    const id = this.afs.createId();
-    const item: Users = { id, name, nick, birthdate, phone, email, password };
-    this.userCollection.doc(id).set(item);
+    const item: Users = { name, nick, birthdate, phone, email, password };
+    this.userCollection.doc(email).set(item);
   }
 
-  leituraDadosUsuario(userId: any) {
-    this.user.subscribe({
+  readUser(emailUser: string) {
+    const path = this.afs.doc<Users>('users/' + emailUser);
+    const userDoc = path.valueChanges();
+    let nick, name;
+
+    userDoc.subscribe({
       next: (res: any) => {
         console.log(res);
+        name = res.name;
+        nick = res.nick;
+        console.log(nick, name);
       },
     });
   }

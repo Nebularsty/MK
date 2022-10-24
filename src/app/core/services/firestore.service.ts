@@ -28,7 +28,7 @@ export class FirestoreService {
   uid: string | undefined = '';
 
   constructor(private afs: AngularFirestore, private auth: AngularFireAuth) {
-    this.itemDoc = afs.doc<Users>('items/1');
+    this.itemDoc = afs.doc<Users>('users/EvHUTUvdB0qm9ZopmFmw');
     this.user = this.itemDoc.valueChanges();
     this.userCollection = afs.collection<Users>('users');
   }
@@ -47,8 +47,10 @@ export class FirestoreService {
   }
 
   leituraDadosUsuario(userId: any) {
-    let leituraDados = this.afs.collection('users').doc(userId).get();
-
-    console.log(leituraDados);
+    this.user.subscribe({
+      next: (res: any) => {
+        console.log(res);
+      },
+    });
   }
 }

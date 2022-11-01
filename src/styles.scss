@@ -1,6 +1,9 @@
 @font-face {
   font-family: "Pixel";
   src: url(../src/fonts/pixel.ttf);
+
+  font-family: "Orbitron";
+  src: url(../src/fonts/Orbitron-VariableFont_wght.ttf);
 }
 
 body {
@@ -9,7 +12,7 @@ body {
 
 * {
   // font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-family: "Pixel";
+  font-family: "Orbitron";
   margin: 0;
   padding: 0;
 }

@@ -2,15 +2,21 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+
+  .carrossel {
+    width: 90%;
+  }
 
   .faixa {
-    width: 100%;
+    width: 90%;
     height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #0094ff;
     border-radius: 8px;
+    margin: 20px 0 0 0;
 
     .faixa__texto {
       font-size: 30px;
@@ -20,16 +26,17 @@
   }
 
   .grade__card {
-    margin: 10px 0 0 0;
+    width: 90%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
+    grid-template-columns: repeat(3, auto);
+    margin: 20px 0 0 0;
+    gap: 15px;
 
     .card {
       display: flex;
       flex-direction: column;
       gap: 10px;
-      width: 70%;
+      width: 100%;
 
       .titulo {
         font-size: 25px;
@@ -56,12 +63,19 @@
 
       .computador {
         display: flex;
-        gap: 10px;
+        margin-top: 15px;
+        gap: 15px;
 
         .imagem__computador {
           width: 100px;
           height: 100px;
           background-color: #0094ff;
+        }
+
+        .info__computador {
+          p {
+            font-size: 12px;
+          }
         }
       }
     }

@@ -24,6 +24,7 @@ import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { CarrosselComponent } from './shared/components/carrossel/carrossel.component';
 import { MontepcComponent } from './modules/home/pages/montepc/montepc.component';
 import { ProfileComponent } from './modules/home/pages/profile/profile.component';
+import { InputComponent } from './shared/components/input/input/input.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { ProfileComponent } from './modules/home/pages/profile/profile.component
     CarrosselComponent,
     MontepcComponent,
     ProfileComponent,
+    InputComponent,
   ],
   imports: [
     BrowserModule,

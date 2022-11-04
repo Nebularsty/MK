@@ -46,14 +46,10 @@ export class FirestoreService {
   readUser(emailUser: string) {
     const path = this.afs.doc<Users>('users/' + emailUser);
     const userDoc = path.valueChanges();
-    let nick, name;
 
     userDoc.subscribe({
       next: (res: any) => {
         console.log(res);
-        name = res.name;
-        nick = res.nick;
-        console.log(nick, name);
       },
     });
   }

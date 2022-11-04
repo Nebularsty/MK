@@ -7,6 +7,7 @@ import { FirestoreService } from 'src/app/core/services/firestore.service';
   styleUrls: ['./index.component.scss'],
 })
 export class IndexComponent implements OnInit {
+  public list: number = 3;
   constructor(private fire: FirestoreService) {}
 
   ngOnInit(): void {}

@@ -6,9 +6,28 @@
 
   .info__user {
     width: 70vw;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
   }
 
   .info__label {
+    width: 100%;
     display: flex;
+    gap: 20px;
+
+    .label__direita {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      gap: 40px;
+    }
+
+    .label__esquerda {
+      display: flex;
+      flex-direction: column;
+      width: 40%;
+      gap: 40px;
+    }
   }
 }

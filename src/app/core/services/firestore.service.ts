@@ -1,4 +1,3 @@
-import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import {
@@ -25,7 +24,7 @@ export class FirestoreService {
   userCollection: any;
   user: Observable<Users | undefined>;
 
-  constructor(private afs: AngularFirestore, private auth: AngularFireAuth) {
+  constructor(private afs: AngularFirestore) {
     this.itemDoc = afs.doc<Users>('users/EvHUTUvdB0qm9ZopmFmw');
     this.user = this.itemDoc.valueChanges();
     this.userCollection = afs.collection<Users>('users');

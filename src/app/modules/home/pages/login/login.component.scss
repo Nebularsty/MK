@@ -10,11 +10,12 @@
 }
 
 .geral {
+  height: 100vh;
+  width: 40vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 50vw;
+  background: none;
 
   .login_container {
     height: 100%;
@@ -23,7 +24,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 25px;
+    gap: 30px;
     padding: 30px;
     background-color: none;
     border-radius: 20px;
@@ -44,7 +45,7 @@
       display: flex;
       gap: 20px;
       .botao__login {
-        width: 100px;
+        width: 120px;
         border-color: #fff;
         color: #fff;
       }
@@ -53,8 +54,18 @@
     .titulo__login {
       display: flex;
       justify-content: center;
-      font-size: 60px;
+      font-size: 50px;
       color: #fff;
     }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .geral {
+    width: 37vw;
+  }
+
+  .titulo__login {
+    font-size: 35px;
   }
 }

@@ -1,38 +1,84 @@
 <div class="geral">
-  <form [formGroup]="registerForm" class="register_container" (ngSubmit)="registerUsuarioNovo()">
-    <h1 class="titulo__register">Register</h1>
+  <form
+    [formGroup]="registerForm"
+    class="register_container"
+    (ngSubmit)="registerUsuarioNovo()"
+  >
+    <h1 class="titulo__register">Registro</h1>
 
     <span class="p-float-label">
-      <input id="float-input" class="input__register" type="text" pInputText formControlName="name">
+      <input
+        id="float-input"
+        class="input__register"
+        type="text"
+        pInputText
+        formControlName="name"
+      />
       <label for="float-input" class="label">Nome</label>
     </span>
 
     <span class="p-float-label">
-      <input id="float-input" class="input__register" type="text" pInputText formControlName="nick">
+      <input
+        id="float-input"
+        class="input__register"
+        type="text"
+        pInputText
+        formControlName="nick"
+      />
       <label for="float-input" class="label">Nick</label>
     </span>
 
     <span class="p-float-label">
-      <input id="float-input" class="input__register" type="text" pInputText formControlName="birthdate">
+      <input
+        id="float-input"
+        class="input__register"
+        type="text"
+        pInputText
+        formControlName="birthdate"
+      />
       <label for="float-input" class="label">Data de Nascimento</label>
     </span>
 
     <span class="p-float-label">
-      <input id="float-input" class="input__register" type="text" pInputText formControlName="phone">
+      <input
+        id="float-input"
+        class="input__register"
+        type="text"
+        pInputText
+        formControlName="phone"
+      />
       <label for="float-input" class="label">Telefone</label>
     </span>
 
     <span class="p-float-label">
-      <input id="float-input" class="input__register" type="text" pInputText formControlName="email">
+      <input
+        id="float-input"
+        class="input__register"
+        type="text"
+        pInputText
+        formControlName="email"
+      />
       <label for="float-input" class="label">Email</label>
     </span>
 
     <span class="p-float-label">
-      <input id="float-input" class="input__register" type="password" pInputText formControlName="password">
+      <input
+        id="float-input"
+        class="input__register"
+        type="password"
+        pInputText
+        formControlName="password"
+      />
       <label for="float-input" class="label">Senha</label>
     </span>
 
-    <button pButton pRipple type="submit" label="Register" class="p-button-outlined botao__register"></button>
+    <button
+      pButton
+      pRipple
+      type="submit"
+      label="Registro"
+      class="p-button-outlined botao__register"
+    ></button>
   </form>
 </div>
-<img class="background" src="../../../../../assets/background/fundo.png">
+<img class="background" src="../../../../../assets/background/fundo.png" />

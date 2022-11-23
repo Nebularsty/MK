@@ -3,7 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/core/authentication/auth.service';
-import { doc } from 'firebase/firestore';
 @Component({
   selector: 'app-cadastro',
   templateUrl: './cadastro.component.html',
@@ -40,6 +39,9 @@ export class CadastroComponent implements OnInit {
     const email = this.registerForm.value.email;
     const password = this.registerForm.value.password;
 
+    if (nick.length < 5 || nick.length > 20) {
+      return;
+    }
     this.auth.registerUser(
       this.registerForm.value.email,
       this.registerForm.value.password

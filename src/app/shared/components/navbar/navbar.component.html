@@ -5,18 +5,12 @@
 
   <div class="link__pages__nav">
     <p (click)="irParaHome()">Home</p>
-    <p>Monte o seu</p>
+    <p (click)="irParaMontePc()">Monte o seu</p>
   </div>
 
   <div class="usuario__nav" (click)="irParaPerfil()">
     <p class="nick__user">Nebularsty</p>
-    <p-avatar
-      *ngIf="profileImg"
-      image="../assets/profile/user.png"
-      styleClass="mr-2"
-      size="xlarge"
-      shape="circle"
-    >
+    <p-avatar *ngIf="profileImg" image="../assets/profile/user.png" styleClass="mr-2" size="xlarge" shape="circle">
     </p-avatar>
   </div>
 </div>

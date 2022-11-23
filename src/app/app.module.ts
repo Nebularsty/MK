@@ -26,6 +26,7 @@ import { MontepcComponent } from './modules/home/pages/montepc/montepc.component
 import { ProfileComponent } from './modules/home/pages/profile/profile.component';
 import { CardComponent } from './shared/components/card/card.component';
 import { InputComponent } from './shared/components/input/input/input.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { InputComponent } from './shared/components/input/input/input.component'
     AngularFireModule.initializeApp(environment.firebase),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
+    HttpClientModule,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent],

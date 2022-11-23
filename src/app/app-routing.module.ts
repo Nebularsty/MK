@@ -1,3 +1,4 @@
+import { MontepcComponent } from './modules/home/pages/montepc/montepc.component';
 import { ProfileComponent } from './modules/home/pages/profile/profile.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -10,6 +11,7 @@ const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'cadastro', component: CadastroComponent },
   { path: 'perfil', component: ProfileComponent },
+  { path: 'monte-o-seu', component: MontepcComponent },
   {
     path: 'index',
     component: IndexComponent,

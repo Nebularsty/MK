@@ -27,4 +27,8 @@ export class NavbarComponent implements OnInit {
   irParaPerfil() {
     this.route.navigate(['perfil']);
   }
+
+  irParaMontePc() {
+    this.route.navigate(['monte-o-seu']);
+  }
 }

@@ -1,5 +1,4 @@
 import Pecas from './../models/Pecas.model';
-import { API_PATH } from './../../../environments/environment';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
@@ -10,7 +9,7 @@ export class ApiPecasService {
   constructor(private httpClient: HttpClient) {}
 
   obterTodos() {
-    return this.httpClient.get<Pecas[]>(`${API_PATH}Carro`).toPromise();
-    //Carros é o End Point da minha API
+    let response = this.httpClient.get('http://localhost:9999/computadores/');
+    response.subscribe((data) => console.log(data));
   }
 }

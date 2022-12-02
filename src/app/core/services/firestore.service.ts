@@ -1,3 +1,4 @@
+import User from 'src/app/core/models/User.mode';
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import {
@@ -48,7 +49,8 @@ export class FirestoreService {
 
     userDoc.subscribe({
       next: (res: any) => {
-        console.log(res);
+        const usuario: User = res;
+        return usuario;
       },
     });
   }

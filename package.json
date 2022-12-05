@@ -21,6 +21,7 @@
     "@angular/router": "^14.2.2",
     "@firebase/firestore": "^3.5.0",
     "angularfirestore-deep": "^1.0.9",
+    "cors": "^2.8.5",
     "firebase": "^9.10.0",
     "keen-slider": "^6.8.2",
     "ngx-mask": "^14.2.4",

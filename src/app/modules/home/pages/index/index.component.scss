@@ -25,10 +25,12 @@
     }
   }
 
-  .grade__card {
-    display: flex;
-    gap: 30px;
+  .grade__card__pc {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     margin-top: 10px;
+    gap: 60px;
+
     .card {
       display: flex;
       flex-direction: column;
@@ -46,6 +48,54 @@
         justify-content: center;
         background-color: #a5b0b8af;
         border-radius: 10px;
+      }
+    }
+  }
+
+  .card__pecas {
+    height: 400px;
+    overflow: auto;
+    margin: 30px 0;
+
+    .grade__card {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      margin-top: 10px;
+      margin: 40px;
+      gap: 30px;
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        border: 1px solid #0094ff;
+        border-radius: 8px;
+
+        .imagem {
+          height: auto;
+          width: 200px;
+        }
+
+        .faixa__valor {
+          display: flex;
+          justify-content: center;
+          background-color: #a5b0b8af;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .geral__index {
+    .card__pecas {
+      .grade__card {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 10px;
+        gap: 30px;
       }
     }
   }

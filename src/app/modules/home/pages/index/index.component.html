@@ -9,14 +9,42 @@
     <p class="faixa__texto">Computadores</p>
   </div>
 
-  <div class="grade__card">
-    <div class="card" *ngFor="let item of pecas">
+  <div class="grade__card__pc">
+    <div class="card" *ngFor="let item of pcs">
       <p>{{ item.nomeDoComputador }}</p>
-      <p>{{ item.hd }}</p>
       <img class="imagem" src="../../../../../assets/imagens/pc-intel.png" />
       <p>Pontos:{{ item.ponto }}</p>
       <div class="faixa__valor">
         <p>R${{ item.valor }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="faixa">
+    <p class="faixa__texto">Placas de Video</p>
+  </div>
+
+  <div class="card__pecas">
+    <div class="grade__card">
+      <div class="card" *ngFor="let pecas of placaDeVideo">
+        <p>{{ pecas.modelo }}</p>
+        <p>{{ pecas.marca }}</p>
+        <p>{{ pecas.preco }}</p>
+        <p>{{ pecas.vram }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="faixa">
+    <p class="faixa__texto">Processadores</p>
+  </div>
+
+  <div class="card__pecas">
+    <div class="grade__card">
+      <div class="card" *ngFor="let pecas of processadores">
+        <p>{{ pecas.modelo }}</p>
+        <p>{{ pecas.marca }}</p>
+        <p>{{ pecas.preco }}</p>
       </div>
     </div>
   </div>

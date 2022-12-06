@@ -10,8 +10,16 @@ import { LoginComponent } from './modules/home/pages/login/login.component';
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'cadastro', component: CadastroComponent },
-  { path: 'perfil', component: ProfileComponent },
-  { path: 'monte-o-seu', component: MontepcComponent },
+  {
+    path: 'perfil',
+    component: ProfileComponent,
+    canActivate: [AthenticationGuardGuard],
+  },
+  {
+    path: 'monte-o-seu',
+    component: MontepcComponent,
+    canActivate: [AthenticationGuardGuard],
+  },
   {
     path: 'index',
     component: IndexComponent,

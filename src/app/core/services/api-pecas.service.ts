@@ -1,4 +1,3 @@
-import Pc from './../models/Pecas.model';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
@@ -10,5 +9,13 @@ export class ApiPecasService {
 
   obterTodos() {
     return this.httpClient.get('http://localhost:9999/computadores/');
+  }
+
+  obterPlacasDeVideo() {
+    return this.httpClient.get('http://localhost:9999/placaDeVideo/');
+  }
+
+  obterProcessadores() {
+    return this.httpClient.get('http://localhost:9999/processador/');
   }
 }

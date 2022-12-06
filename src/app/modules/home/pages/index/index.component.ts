@@ -9,17 +9,15 @@ import Pc from 'src/app/core/models/Pecas.model';
   styleUrls: ['./index.component.scss'],
 })
 export class IndexComponent implements OnInit {
-  public pecas: any;
-  public imagensPc: any = [
-    '../../../../../assets/imagens/pc-intel.png',
-    '../../../../../assets/imagens/pc-amd.png',
-  ];
+  public pcs: any;
+  public placaDeVideo: any;
+  public processadores: any;
 
   constructor(
     private fire: FirestoreService,
     private apiPecas: ApiPecasService
   ) {
-    console.log(this.pecas);
+    console.log(this.pcs);
   }
 
   ngOnInit() {
@@ -28,11 +26,19 @@ export class IndexComponent implements OnInit {
 
   obterPecas() {
     this.apiPecas.obterTodos().subscribe({
-      next: (res: any) => console.log((this.pecas = res)),
+      next: (res: any) => (this.pcs = res),
       error: (err: any) => console.log(err),
     });
 
-    this.pecas = this.imagensPc;
+    this.apiPecas.obterPlacasDeVideo().subscribe({
+      next: (res: any) => (this.placaDeVideo = res),
+      error: (err: any) => console.log(err),
+    });
+
+    this.apiPecas.obterProcessadores().subscribe({
+      next: (res: any) => (this.processadores = res),
+      error: (err: any) => console.log(err),
+    });
   }
 
   obterlistaPecas() {}

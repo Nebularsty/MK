@@ -80,14 +80,17 @@ margin-top: 0em; ;
 .clearfix {
   content: "";
   display: table;
-  clear: both; }
+  clear: both; 
+
+}
+  
 
 
 body {
  
   font-size: 16px;
   color: #444444;
-  background-color: #f1f1f1;
+  background-color: #ffffff;
   margin: 0;
   align-items: center;
 }
@@ -120,7 +123,7 @@ h3 {
 }
 
 .questions_box {
-  background-color: #ffffff;
+  background-color: #f1f1f1;
   padding: 60px;
   text-align: left;
   margin-bottom: 2rem;

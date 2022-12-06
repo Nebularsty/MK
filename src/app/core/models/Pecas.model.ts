@@ -3,4 +3,5 @@ export default interface Pc {
   nomeDoComputador: string;
   ponto: string;
   valor: string;
+  checkado: string;
 }

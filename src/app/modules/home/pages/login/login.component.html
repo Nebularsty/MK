@@ -2,43 +2,19 @@
   <form [formGroup]="loginForm" class="login_container" (ngSubmit)="login()">
     <h1 class="titulo__login">Make Computer</h1>
     <span class="p-float-label">
-      <input
-        id="float-input"
-        class="input__login"
-        type="text"
-        pInputText
-        formControlName="email"
-      />
+      <input id="float-input" class="input__login" type="text" pInputText formControlName="email" />
       <label for="float-input" class="label">Email</label>
     </span>
 
     <span class="p-float-label">
-      <input
-        id="float-input"
-        class="input__login"
-        type="password"
-        pInputText
-        formControlName="password"
-      />
+      <input id="float-input" class="input__login" type="password" pInputText formControlName="password" />
       <label for="float-input" class="label">Senha</label>
     </span>
 
     <div class="botoes__container">
-      <button
-        pButton
-        pRipple
-        type="submit"
-        label="Login"
-        class="p-button-outlined botao__login"
-      ></button>
-      <button
-        pButton
-        pRipple
-        type="button"
-        label="Registro"
-        class="p-button-outlined botao__login"
-        (click)="paginaCadastroBotao()"
-      ></button>
+      <button pButton pRipple type="submit" label="Login" class="p-button-outlined botao__login"></button>
+      <button pButton pRipple type="button" label="Registro" class="p-button-outlined botao__login"
+        (click)="paginaCadastroBotao()"></button>
     </div>
 
     <!-- <p-button

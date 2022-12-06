@@ -24,6 +24,7 @@ export class FirestoreService {
   private itemDoc: AngularFirestoreDocument<Users>;
   userCollection: any;
   user: Observable<Users | undefined>;
+  public infoUser: any;
 
   constructor(private afs: AngularFirestore) {
     this.itemDoc = afs.doc<Users>('users/EvHUTUvdB0qm9ZopmFmw');
@@ -49,8 +50,7 @@ export class FirestoreService {
 
     userDoc.subscribe({
       next: (res: any) => {
-        const usuario: User = res;
-        return usuario;
+        this.infoUser = res;
       },
     });
   }

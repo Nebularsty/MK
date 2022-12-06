@@ -12,7 +12,13 @@ export class ProfileComponent implements OnInit {
   public infoUser: User[] = [];
   constructor(private auth: AuthService, private fire: FirestoreService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.informacoesUsuario();
+  }
+
+  informacoesUsuario() {
+    this.infoUser = this.fire.infoUser;
+  }
 
   logout() {
     this.auth.logout();

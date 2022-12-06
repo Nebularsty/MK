@@ -13,6 +13,7 @@ export class MontepcComponent implements OnInit {
   computadores: Pc[] =[]
   formulario: FormGroup;
   valorCheckado: any = 0;
+  precoDoPc: any = 0;
  
 
   constructor() { 
@@ -74,6 +75,21 @@ finalizarQuestionario(){
         this.valorCheckado = parseInt(item.value)
         console.log(item.value)
       }
+
+    }
+  })
+  this.finalizarPreco();
+
+}
+
+
+finalizarPreco(){
+  <HTMLInputElement[]><unknown>document.querySelectorAll('.preco').forEach((item: any) => {
+    if (item.checked) { 
+        this.precoDoPc = parseInt(item.value)
+        console.log(item.value)
+        console.log(this.precoDoPc)
+      
 
     }
   })

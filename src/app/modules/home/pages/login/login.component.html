@@ -1,6 +1,7 @@
 <div class="geral">
   <form [formGroup]="loginForm" class="login_container" (ngSubmit)="login()">
-    <h1 class="titulo__login">Make Computer</h1>
+    <img class="titulo__login" src="../../../../assets/logo/logomk.png" />
+
     <span class="p-float-label">
       <input id="float-input" class="input__login" type="text" pInputText formControlName="email" />
       <label for="float-input" class="label">Email</label>
@@ -13,10 +14,9 @@
 
     <div class="botoes__container">
       <button pButton pRipple type="submit" label="Login" class="p-button-outlined botao__login"></button>
-      <button pButton pRipple type="button" label="Registro" class="p-button-outlined botao__login"
+      <button pButton pRipple type="button" label="Registre-se" class="p-button-outlined botao__login"
         (click)="paginaCadastroBotao()"></button>
     </div>
-
     <!-- <p-button
       styleClass="px-3"
       class="botao__login-google"

@@ -1,7 +1,7 @@
-export default interface Pecas {
+export default interface Pc {
   id: number;
-  nomePc: string;
-  info: string;
-  preco: string;
-  marca: string;
+  nomeDoComputador: string;
+  ponto: string;
+  valor: string;
+  checkado: string;
 }

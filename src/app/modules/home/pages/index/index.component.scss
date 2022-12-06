@@ -25,58 +25,77 @@
     }
   }
 
-  .grade__card {
-    width: 90%;
+  .grade__card__pc {
     display: grid;
-    grid-template-columns: repeat(3, auto);
-    margin: 20px 0 0 0;
-    gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 10px;
+    gap: 60px;
 
     .card {
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      width: 100%;
+      padding: 20px;
+      border: 1px solid #0094ff;
+      border-radius: 8px;
 
-      .titulo {
-        font-size: 25px;
-
-        .titulo__texto {
-          font-size: 22px;
-          color: chartreuse;
-        }
+      .imagem {
+        height: auto;
+        width: 200px;
       }
 
-      .faixa__preco {
-        width: 100%;
-        height: 40px;
+      .faixa__valor {
         display: flex;
-        border-radius: 8px;
-        align-items: center;
         justify-content: center;
-        background-color: #e2dcdc;
+        background-color: #a5b0b8af;
+        border-radius: 10px;
+      }
+    }
+  }
 
-        .preco__texto {
-          font-size: 18px;
+  .card__pecas {
+    height: 400px;
+    overflow: auto;
+    margin: 30px 0;
+
+    .grade__card {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      margin-top: 10px;
+      margin: 40px;
+      gap: 30px;
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        border: 1px solid #0094ff;
+        border-radius: 8px;
+
+        .imagem {
+          height: auto;
+          width: 200px;
+        }
+
+        .faixa__valor {
+          display: flex;
+          justify-content: center;
+          background-color: #a5b0b8af;
+          border-radius: 10px;
         }
       }
+    }
+  }
+}
 
-      .computador {
-        display: flex;
-        margin-top: 15px;
-        gap: 15px;
-
-        .imagem__computador {
-          width: 100px;
-          height: 100px;
-          background-color: #0094ff;
-        }
-
-        .info__computador {
-          p {
-            font-size: 12px;
-          }
-        }
+@media only screen and (max-width: 800px) {
+  .geral__index {
+    .card__pecas {
+      .grade__card {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 10px;
+        gap: 30px;
       }
     }
   }

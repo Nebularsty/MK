@@ -1,2 +1,100 @@
 <app-navbar></app-navbar>
-<p>montepc works!</p>
+
+<link rel="stylesheet" href="montepc.component.scss">
+<body>
+    <div class="container">	
+      <div class="row">
+          <div class="two-thirds column">
+            <div class="boxh2">
+                <br>
+          <h2 class="h2">Por que você quer montar o PC?</h2>
+          <br>
+          <br>
+        </div>
+          <div id="progress_bar"></div>
+              <form [formGroup]="formulario" class="questions_box">
+
+                
+  
+                  <div id="question-1">
+                    
+                     
+                      <h3>Jogar?</h3>
+                      <br>  
+                      <input class="option" formControlName="primeiraCheckBox" #respostaPontos
+                      (change)="changeSelect()" id="question-1-answer-a" type="checkbox"  value=25> Valorant, cs go, LOL<br>
+                      <br>
+                      <input class="option" formControlName="segundaCheckBox" #respostaPontos
+                      (change)="changeSelect()" id="question-1-answer-b" type="checkbox"   value=35> GTA V, Mortal Kombat, FIFA<br>
+                      <br>
+                      <input class="option" formControlName="terceiraCheckBox" #respostaPontos
+                      (change)="changeSelect()" id="question-1-answer-c" type="checkbox"   value=45> Warzone, Cyberpunk, RDR2<br>
+                      <br>
+
+
+                      
+                      <h3>Trabalhar?</h3>
+                        <br>
+                      <input class="option" formControlName="quartaCheckBox" #respostaPontos
+                      (change)="changeSelect()" id="question-2-answer-a" type="checkbox"   value=25> Programação<br>
+                        <br>
+                      <input class="option" formControlName="quintaCheckBox" #respostaPontos
+                      (change)="changeSelect()" id="question-2-answer-b" type="checkbox"  value=50> Engenharia<br>
+                        <br>
+                      <input class="option" formControlName="sextaCheckBox" #respostaPontos
+                      (change)="changeSelect()" id="question-2-answer-c" type="checkbox"  value=25> Trabalhos com Pacote Office<br>
+                        <br>
+                      <input class="option" formControlName="setimaCheckBox" #respostaPontos
+                      (change)="changeSelect()" id="question-2-answer-d" type="checkbox"  value=40> Edição de video<br>
+                      <br>  
+
+
+                      
+                      <h3>Estudar?</h3>
+                      <br>
+                      <input class="option" formControlName="oitavaCheckBox" #respostaPontos
+                      (change)="changeSelect()" id="question-3-answer-a" type="checkbox"  value=20> Programação<br>
+                      <br>
+                      <input class="option" formControlName="nonaCheckBox" #respostaPontos
+                      (change)="changeSelect()" id="question-3-answer-b" type="checkbox"  value=35> Engenharia<br>
+                      <br>
+                      <input class="option" formControlName="decimaCheckBox" #respostaPontos
+                      (change)="changeSelect()" id="question-3-answer-c" type="checkbox"  value=30> Edição de video<br>
+                      <br>
+
+
+
+                      
+                      <h3> Qual o valor mais adequado para você?</h3>
+                      <br>
+                      <input class="preco" formControlName="decimaPrimeiraCheckBox" #respostaPontos
+                      (change)="changeSelect()" id="question-4-answer-a" type="checkbox"  value=1600> 1600 - 2100<br>
+                      <br>
+                      <input class="preco" formControlName="decimaSegundaCheckBox" #respostaPontos
+                      (change)="changeSelect()" id="question-4-answer-b" type="checkbox"  value=2100> 2100 - 2700<br>
+                      <br>
+                      <input class="preco" formControlName="decimaTerceiraCheckBox" #respostaPontos
+                      (change)="changeSelect()" id="question-4-answer-c" type="checkbox"  value=2700> 2700 - 3500<br>
+                      <br>
+                      <input class="preco" formControlName="decimaQuartaCheckBox" #respostaPontos
+                      (change)="changeSelect()" id="question-4-answer-d" type="checkbox"  value=3500> 3500 - 5000<br>
+                      <br>
+                      <input class="preco" formControlName="decimaQuintaCheckBox" #respostaPontos
+                      (change)="changeSelect()" id="question-4-answer-e" type="checkbox" value=5000> 5000+<br>
+                      <br>
+
+                      <button id="submit1" class="button" (click)="finalizarQuestionario()"> Ver resultados</button>
+                      
+              <div class="clearfix"></div>
+                  </div>
+  
+  
+                    
+              </form>
+  
+          </div>
+        </div>
+    </div>
+  
+    <!-- <script src="scripts.js"></script> -->
+  </body>

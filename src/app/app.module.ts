@@ -11,10 +11,15 @@ import { IndexComponent } from './modules/home/pages/index/index.component';
 
 import { AuthService } from './core/authentication/auth.service';
 
+//primeNG imports
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { MegaMenuModule } from 'primeng/megamenu';
 import { AvatarModule } from 'primeng/avatar';
+import { DialogModule } from 'primeng/dialog';
+import { CardModule } from 'primeng/card';
+import { CarouselModule } from 'primeng/carousel';
+
 import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
@@ -27,6 +32,7 @@ import { ProfileComponent } from './modules/home/pages/profile/profile.component
 import { CardComponent } from './shared/components/card/card.component';
 import { InputComponent } from './shared/components/input/input/input.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PopupComponent } from './shared/components/popup/popup.component';
 
 @NgModule({
   declarations: [
@@ -40,12 +46,16 @@ import { HttpClientModule } from '@angular/common/http';
     ProfileComponent,
     CardComponent,
     InputComponent,
+    PopupComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     InputTextModule,
     ButtonModule,
+    DialogModule,
+    CardModule,
+    CarouselModule,
     FormsModule,
     ReactiveFormsModule,
     AvatarModule,

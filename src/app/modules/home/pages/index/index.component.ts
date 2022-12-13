@@ -1,3 +1,4 @@
+import { forEach } from 'lodash';
 import { ApiPecasService } from './../../../../core/services/api-pecas.service';
 import { Component, OnInit } from '@angular/core';
 import { FirestoreService } from 'src/app/core/services/firestore.service';
@@ -22,13 +23,18 @@ export class IndexComponent implements OnInit {
 
   ngOnInit() {
     this.obterPecas();
+    console.log(this.pcs);
   }
 
   obterPecas() {
+
     this.apiPecas.obterTodos().subscribe({
-      next: (res: any) => (this.pcs = res),
+      next: (res: any) => (this.pcs = res),      
       error: (err: any) => console.log(err),
-    });
+    })
+    console.log(this.pcs);
+    ;
+
 
     this.apiPecas.obterPlacasDeVideo().subscribe({
       next: (res: any) => (this.placaDeVideo = res),

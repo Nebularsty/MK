@@ -80,13 +80,17 @@ export class MontepcComponent implements OnInit {
       console.log(this.valorFinal);
       return pc.ponto == valor;
     });
+
+    console.log(this.computadores); 
   }
 
   listaDeComputadores() {
     this.apiPecas.obterTodos().subscribe({
-      next: (res: any) => console.log(res),
+      next: (res: any) => this.computadores = res,
       error: (err: any) => console.log(err),
     });
+
+    console.log(this.computadores);
   }
 
   finalizarPreco() {

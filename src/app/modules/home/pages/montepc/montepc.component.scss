@@ -4,34 +4,33 @@
   width: 100vw;
   display: flex;
   justify-content: center;
-  flex-direction: column;
+}
 
-  .grade__card__pc {
-    width: 100%;
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(3, 1fr);
-    margin-top: 10px;
-    gap: 60px;
+.grade__card__pc {
+  width: 80%;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 10px;
+  gap: 60px;
 
-    .card {
+  .card {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid #0094ff;
+    border-radius: 8px;
+
+    .imagem {
+      height: auto;
+      width: 200px;
+    }
+
+    .faixa__valor {
       display: flex;
-      flex-direction: column;
-      padding: 20px;
-      border: 1px solid #0094ff;
-      border-radius: 8px;
-
-      .imagem {
-        height: auto;
-        width: 200px;
-      }
-
-      .faixa__valor {
-        display: flex;
-        justify-content: center;
-        background-color: #a5b0b8af;
-        border-radius: 10px;
-      }
+      justify-content: center;
+      background-color: #a5b0b8af;
+      border-radius: 10px;
     }
   }
 }
@@ -78,7 +77,7 @@
 
 @media (min-width: 640px) {
   .container {
-    width: 100%;
+    width: 80%;
   }
 }
 

@@ -11,6 +11,7 @@
 
   <div class="grade__card__pc">
     <div class="card" *ngFor="let item of pcs">
+      <p *ngFor="let info of pcs.fonte">{{info.modelo}}</p>
       <p>{{ item.nomeDoComputador }}</p>
       <img class="imagem" src="../../../../../assets/imagens/pc-intel.png" />
       <p>Pontos:{{ item.ponto }}</p>

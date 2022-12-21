@@ -1,4 +1,4 @@
-import User from 'src/app/core/models/User.mode';
+import User from 'src/app/core/models/User.model';
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import {

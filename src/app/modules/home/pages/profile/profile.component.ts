@@ -1,7 +1,7 @@
 import { FirestoreService } from './../../../../core/services/firestore.service';
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/core/authentication/auth.service';
-import User from 'src/app/core/models/User.mode';
+import User from 'src/app/core/models/User.model';
 
 @Component({
   selector: 'app-profile',

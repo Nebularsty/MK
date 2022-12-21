@@ -2,15 +2,23 @@
   <form [formGroup]="loginForm" class="login_container" (ngSubmit)="login()">
     <img class="titulo__login" src="../../../../assets/logo/logomk.png" />
 
-    <span class="p-float-label">
-      <input id="float-input" class="input__login" type="text" pInputText formControlName="email" />
-      <label for="float-input" class="label">Email</label>
-    </span>
+    <div class="input">
+      <span class="p-float-label">
+        <input id="float-input" class="input__login" type="text" pInputText formControlName="email" />
+        <label for="float-input" class="label">Email</label>
+      </span>
+      <app-error-message *ngIf="loginForm.get('email')?.errors && loginForm.get('email')?.touched"
+        description="Senha necessária"></app-error-message>
+    </div>
 
-    <span class="p-float-label">
-      <input id="float-input" class="input__login" type="password" pInputText formControlName="password" />
-      <label for="float-input" class="label">Senha</label>
-    </span>
+    <div class="input">
+      <span class="p-float-label">
+        <input id="float-input" class="input__login" type="password" pInputText formControlName="password" />
+        <label for="float-input" class="label">Senha</label>
+      </span>
+      <app-error-message *ngIf="loginForm.get('password')?.errors && loginForm.get('password')?.touched"
+        description="Senha necessária"></app-error-message>
+    </div>
 
     <div class="botoes__container">
       <button pButton pRipple type="submit" label="Login" class="p-button-outlined botao__login"></button>

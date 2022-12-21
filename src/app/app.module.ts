@@ -33,6 +33,7 @@ import { CardComponent } from './shared/components/card/card.component';
 import { InputComponent } from './shared/components/input/input/input.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PopupComponent } from './shared/components/popup/popup.component';
+import { ErrorMessageComponent } from './shared/components/error-message/error-message.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { PopupComponent } from './shared/components/popup/popup.component';
     CardComponent,
     InputComponent,
     PopupComponent,
+    ErrorMessageComponent,
   ],
   imports: [
     BrowserModule,

@@ -24,8 +24,8 @@ export class LoginComponent implements OnInit {
     private firestoreService: FirestoreService
   ) {
     this.loginForm = new FormGroup({
-      email: new FormControl('', Validators.required),
-      password: new FormControl('', Validators.required),
+      email: new FormControl('', [Validators.required, Validators.email]),
+      password: new FormControl('', [Validators.required, Validators.min(5)]),
     });
   }
 
